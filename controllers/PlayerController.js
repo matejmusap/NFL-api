@@ -5,7 +5,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       Player.find(params)
         .then(data => resolve(data))
-        .catch(err => err);
+        .catch(err => reject(err));
     });
   },
   getById: id => {

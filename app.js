@@ -13,10 +13,10 @@ const config = {
     url: "mongodb://localhost/footballdb",
     type: "mongo",
     onError: err => {
-      console.log("FOOTBALL DB Connection Failed!");
+      console.log("footballdb Connection Failed!");
     },
     onSuccess: () => {
-      console.log("FOOTBALL DB Successfully Connected!");
+      console.log("footballdb Successfully Connected!");
     }
   }
 };

@@ -5,7 +5,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       Team.find(params)
         .then(data => resolve(data))
-        .catch(err => err);
+        .catch(err => reject(err));
     });
   },
   getById: id => {
@@ -32,7 +32,7 @@ module.exports = {
   delete: id => {
     return new Promise((resolve, reject) => {
       Team.findByIdAndRemove(id)
-        .then(() => resolve({ id: id }))
+        .then()
         .catch(err => reject(err));
     });
   }
